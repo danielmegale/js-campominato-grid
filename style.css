@@ -27,7 +27,7 @@ button{
     max-width: 1080px;
     margin: 0 auto;
 }
-.grid{
+#grid{
     width: 500px;
     height: 500px;
     border: 2px dashed black;
@@ -40,6 +40,10 @@ button{
     height:calc(100% / 10) ;
     border: 2px solid black;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
 }
 .cell.clicked{
     background-color: dodgerblue;
