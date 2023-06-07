@@ -10,30 +10,41 @@ const colsMedium=9;
 const rowsHard=7;
 const colsHard=7;
 //Totali
-const totalCells= rows * cols;
-const totalCellsMedium= rowsMedium * colsMedium;
-const totalCellsHard= rowsHard * colsHard;
-
+let totalCells='';
+let cells = '';
 
 //Stampiamo la griglia la click
 button.addEventListener('click',function(){
-    grid.innerHTML=''
+    grid.innerHTML='';
     
+    if(level.value==='easy'){
+        totalCells= rows * cols;
+        cells='cell';
+    }else if (level.value==='medium'){
+        totalCells= rowsMedium * colsMedium;
+        cells='cell-medium';
+    }else if(level.value==='hard'){
+        totalCells= rowsHard * colsHard;
+        cells='cell-hard';
+    }
     //Stampiamo le celle
     for(let i=1;i<=totalCells;i++){
         const cell =createCell(i);
         
         cell.addEventListener('click',function () {
             cell.classList.toggle('clicked');
-            console.log(i)
+            console.log(i);
         })
         grid.appendChild(cell);
     }
 })
+
 //Function
 function createCell(cellNumber){
     const cell =document.createElement('div');
-    cell.className='cell';
+    cell.className=cells ;
     cell.innerText=cellNumber;
     return cell;
 }
+
+

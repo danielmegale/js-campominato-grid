@@ -48,3 +48,27 @@ button{
 .cell.clicked{
     background-color: dodgerblue;
 }
+.cell-medium{
+    flex-basis: calc(100% / 9);
+    height:calc(100% / 9) ;
+    border: 2px solid black;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cell-medium.clicked{
+    background-color: dodgerblue;
+}
+.cell-hard{
+    flex-basis: calc(100% / 7);
+    height:calc(100% / 7) ;
+    border: 2px solid black;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cell-hard.clicked{
+    background-color: dodgerblue;
+}
